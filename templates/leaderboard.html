@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leaderboard</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+      text-align: center;
+      padding: 40px;
+    }
+    h2 {
+      margin-bottom: 20px;
+      color: #fff;
+      font-size: 2rem;
+    }
+    form {
+      margin-bottom: 25px;
+    }
+    select {
+      padding: 8px 15px;
+      border-radius: 8px;
+      border: none;
+      font-size: 16px;
+      outline: none;
+    }
+    table {
+      width: 80%;
+      margin: 0 auto;
+      border-collapse: collapse;
+      background: #fff;
+      color: #222;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    }
+    th, td {
+      padding: 15px;
+      border-bottom: 1px solid #ccc;
+    }
+    th {
+      background: #3f51b5;
+      color: white;
+    }
+    tr:hover { background: #e8eaf6; }
+    a.btn {
+      display: inline-block;
+      margin-top: 30px;
+      text-decoration: none;
+      color: #fff;
+      background: #3f51b5;
+      padding: 12px 25px;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    a.btn:hover {
+      background: #283593;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <h2>🏆 Leaderboard</h2>
+
+  <form method="get">
+    <label style="font-size:18px;">Select Topic:</label>
+    <select name="topic" onchange="this.form.submit()">
+      <option value="">All Topics</option>
+      {% for t in topics %}
+        <option value="{{ t }}" {% if selected_topic == t %}selected{% endif %}>{{ t.title() }}</option>
+      {% endfor %}
+    </select>
+  </form>
+
+  <table>
+    <tr>
+      <th>Rank</th>
+      <th>Name</th>
+      <th>Topic</th>
+      <th>Score</th>
+      <th>Date</th>
+    </tr>
+    {% for row in data %}
+    <tr>
+      <td>{{ loop.index }}</td>
+      <td>{{ row.name }}</td>
+      <td>{{ row.topic }}</td>
+      <td>{{ row.score }}/{{ row.total }}</td>
+      <td>{{ row.date }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+
+  <a href="{{ url_for('index') }}" class="btn">🏠 Back to Home</a>
+</body>
+</html>

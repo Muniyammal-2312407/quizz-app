@@ -1,0 +1,108 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Background & Layout */
+body {
+  background: linear-gradient(135deg, #3f51b5, #1a237e);
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Card Container */
+.container {
+  background: #ffffff;
+  width: 85%;
+  max-width: 700px;
+  margin: 40px auto;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  padding: 40px 50px;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Header */
+h1, h2 {
+  text-align: center;
+  color: #1a237e;
+  margin-bottom: 25px;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+/* Question Text */
+.question p {
+  font-weight: 600;
+  margin: 15px 0 10px;
+  color: #2c2c54;
+  font-size: 1.1rem;
+}
+
+/* Options Styling */
+.options label {
+  display: block;
+  background: #f8f9ff;
+  color: #111;
+  margin: 10px 0;
+  padding: 12px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border: 1px solid #d0d7ff;
+  font-size: 1rem;
+}
+
+.options label:hover {
+  background: #e8eaff;
+  border-color: #5c6bc0;
+  transform: scale(1.02);
+}
+
+/* Radio Buttons */
+input[type="radio"] {
+  accent-color: #3f51b5;
+  transform: scale(1.2);
+  margin-right: 10px;
+}
+
+/* Buttons */
+button, .btn {
+  background: #3f51b5;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: block;
+  margin: 30px auto 0;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+button:hover, .btn:hover {
+  background: #283593;
+  transform: scale(1.05);
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Footer */
+footer {
+  margin-top: 20px;
+  text-align: center;
+  color: #f1f1f1;
+  font-size: 0.9rem;
+}

@@ -1,0 +1,220 @@
+{
+    "python": [
+        {
+            "question": "What is the correct file extension for Python files?",
+            "options": [
+                ".py",
+                ".java",
+                ".pyt",
+                ".txt"
+            ],
+            "answer": ".py"
+        },
+        {
+            "question": "Which keyword is used to define a function in Python?",
+            "options": [
+                "func",
+                "define",
+                "def",
+                "lambda"
+            ],
+            "answer": "def"
+        },
+        {
+            "question": "Which of the following is a mutable data type in Python?",
+            "options": [
+                "tuple",
+                "string",
+                "list",
+                "int"
+            ],
+            "answer": "list"
+        },
+        {
+            "question": "What does the len() function do?",
+            "options": [
+                "Counts items",
+                "Deletes items",
+                "Sorts items",
+                "Sums items"
+            ],
+            "answer": "Counts items"
+        },
+        {
+            "question": "What symbol is used to comment in Python?",
+            "options": [
+                "//",
+                "#",
+                "/* */",
+                "--"
+            ],
+            "answer": "#"
+        },
+        {
+            "question": "fsfdkjkjfkjfs",
+            "options": [
+                "f",
+                "e",
+                "s",
+                "t"
+            ],
+            "answer": "r"
+        }
+    ],
+    "c": [
+        {
+            "question": "Which symbol is used to end a statement in C?",
+            "options": [
+                ".",
+                ";",
+                ":",
+                ","
+            ],
+            "answer": ";"
+        },
+        {
+            "question": "Which function is used to print output in C?",
+            "options": [
+                "echo()",
+                "printf()",
+                "cout",
+                "cin"
+            ],
+            "answer": "printf()"
+        },
+        {
+            "question": "Which header file is required for printf()?",
+            "options": [
+                "<conio.h>",
+                "<stdio.h>",
+                "<stdlib.h>",
+                "<math.h>"
+            ],
+            "answer": "<stdio.h>"
+        },
+        {
+            "question": "Which keyword is used to return a value from a function?",
+            "options": [
+                "break",
+                "return",
+                "exit",
+                "continue"
+            ],
+            "answer": "return"
+        },
+        {
+            "question": "What is the default return type of a C function?",
+            "options": [
+                "float",
+                "void",
+                "int",
+                "char"
+            ],
+            "answer": "int"
+        }
+    ],
+    "html": [
+        {
+            "question": "What does HTML stand for?",
+            "options": [
+                "Hyper Text Markup Language",
+                "High Transfer Machine Language",
+                "Hyperlink and Text Markup Language",
+                "Home Tool Markup Language"
+            ],
+            "answer": "Hyper Text Markup Language"
+        },
+        {
+            "question": "Choose the correct HTML element for the largest heading:",
+            "options": [
+                "<heading>",
+                "<h6>",
+                "<h1>",
+                "<head>"
+            ],
+            "answer": "<h1>"
+        },
+        {
+            "question": "Which tag is used for inserting a line break?",
+            "options": [
+                "<lb>",
+                "<br>",
+                "<break>",
+                "<new>"
+            ],
+            "answer": "<br>"
+        },
+        {
+            "question": "Which attribute specifies an alternate text for an image?",
+            "options": [
+                "src",
+                "alt",
+                "title",
+                "name"
+            ],
+            "answer": "alt"
+        },
+        {
+            "question": "Which HTML element is used to link JavaScript code?",
+            "options": [
+                "<js>",
+                "<script>",
+                "<javascript>",
+                "<code>"
+            ],
+            "answer": "<script>"
+        }
+    ],
+    "java": [
+        {
+            "question": "Which company developed Java?",
+            "options": [
+                "Sun Microsystems",
+                "Microsoft",
+                "Google",
+                "IBM"
+            ],
+            "answer": "Sun Microsystems"
+        },
+        {
+            "question": "Which method is the entry point of a Java program?",
+            "options": [
+                "start()",
+                "main()",
+                "run()",
+                "init()"
+            ],
+            "answer": "main()"
+        },
+        {
+            "question": "What is the file extension of compiled Java classes?",
+            "options": [
+                ".class",
+                ".java",
+                ".jar",
+                ".exe"
+            ],
+            "answer": ".class"
+        },
+        {
+            "question": "Which keyword is used to inherit a class in Java?",
+            "options": [
+                "this",
+                "import",
+                "extends",
+                "implements"
+            ],
+            "answer": "extends"
+        },
+        {
+            "question": "Which of these is not a Java keyword?",
+            "options": [
+                "static",
+                "Boolean",
+                "void",
+                "try"
+            ],
+            "answer": "Boolean"
+        }
+    ]
+}

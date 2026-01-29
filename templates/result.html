@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Result</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #fff;
+      font-family: "Poppins", sans-serif;
+    }
+
+    .container {
+      background: #fff;
+      color: #222;
+      padding: 40px 50px;
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      width: 80%;
+      max-width: 500px;
+      text-align: center;
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    h2 {
+      color: #1a237e;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin: 10px 0;
+    }
+
+    .success {
+      color: #2e7d32;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .fail {
+      color: #d32f2f;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .btn {
+      background: #3f51b5;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 10px;
+      cursor: pointer;
+      margin: 10px;
+      font-size: 1rem;
+      transition: 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background: #283593;
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Quiz Result</h2>
+    <p>Your Score: <strong>{{ score }} / {{ total }}</strong></p>
+
+    {% if score >= total / 2 %}
+      <p class="success">🎉 Congratulations! You passed the quiz!</p>
+      <a class="btn" href="{{ url_for('download_certificate', topic=topic, score=score, total=total) }}">📜 Download Certificate</a>
+    {% else %}
+      <p class="fail">❌ Sorry, you need at least 50% to pass.</p>
+    {% endif %}
+
+    <br>
+    <a class="btn" href="{{ url_for('leaderboard', topic=topic) }}">🏆 View {{ topic.title() }} Leaderboard</a>
+    <a class="btn" href="{{ url_for('index') }}">🏠 Back to Home</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+    "muniyammu@gmail.com": {
+        "name": "Muniyammal M",
+        "email": "muniyammu@gmail.com",
+        "password": "1234"
+    },
+    "muthu@gmail.com": {
+        "name": "Muthu",
+        "email": "muthu@gmail.com",
+        "password": "1234",
+        "role": "user"
+    },
+    "rathi@gmail.com": {
+        "name": "Rathi",
+        "email": "rathi@gmail.com",
+        "password": "rathi123",
+        "role": "user"
+    }
+}

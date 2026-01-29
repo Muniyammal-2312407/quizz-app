@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduQuiz - Home</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    nav {
+      background: #0d1b4b;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+
+    nav h1 {
+      font-size: 1.8em;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .right-nav {
+      display: flex;
+      gap: 15px;
+    }
+
+    .nav-btn {
+      background: #3949ab;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s ease;
+    }
+
+    .nav-btn:hover {
+      background: #5c6bc0;
+      transform: scale(1.05);
+    }
+
+    .main {
+      text-align: center;
+      margin-top: 50px;
+      flex-grow: 1;
+    }
+
+    h2 {
+      font-size: 2.2em;
+      margin-bottom: 15px;
+    }
+
+    .quiz-btn {
+      display: block;
+      margin: 15px auto;
+      width: 200px;
+      background: #3f51b5;
+      color: white;
+      border: none;
+      padding: 15px 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .quiz-btn:hover {
+      background: #283593;
+      transform: translateY(-3px);
+    }
+
+    footer {
+      background: #0d1b4b;
+      text-align: center;
+      padding: 12px;
+      font-size: 0.9rem;
+      color: #ddd;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    footer span {
+      color: #ff6b6b;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .right-nav {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <h1>🎓 EduQuiz</h1>
+    <div class="right-nav">
+      {% if user %}
+        <span>👋 {{ user['name'] }}</span>
+        <a href="{{ url_for('logout') }}" class="nav-btn" style="background:#e53935;">Logout</a>
+      {% else %}
+        <a href="{{ url_for('login') }}" class="nav-btn">Login</a>
+        <a href="{{ url_for('register') }}" class="nav-btn" style="background:#43a047;">Register</a>
+      {% endif %}
+    </div>
+  </nav>
+
+  <div class="main">
+    <h2>Welcome to <span style="color:#ffd54f;">EduQuiz</span></h2>
+    <p>Select a topic to start your quiz:</p>
+
+    {% for topic in topics %}
+      <a href="{{ url_for('quiz', topic=topic) }}" class="quiz-btn">{{ topic.title() }} Quiz</a>
+    {% endfor %}
+  </div>
+
+  <footer>
+    © 2025 <b>EduQuiz</b> | Designed with <span>♥</span> for Smart Learners
+  </footer>
+
+</body>
+</html>
